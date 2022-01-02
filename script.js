@@ -1,7 +1,7 @@
 
 
  let test ;
- const computer = ["Rock", "Paper", "Scissors"];
+ const computer = ["ROCK", "PAPER", "SCISSORS"];
 function computerPlay() {
     return computer[~~(Math.random() * computer.length)];
     // ~~ :  It cuts all fractional digits.
@@ -9,13 +9,15 @@ function computerPlay() {
     //  return p1 || p2 || p3;
   }
 
-  test = computerPlay() ;
-  console.log(test)
+  //test = computerPlay() ;
+  //console.log(test)
 
 
   function playRound(playerSelection, computerSelection) {
 
-    if (playerSelection == computer[0] &  computerSelection == computer[1] ) {
+    playerSelection = playerSelection.toUpperCase() ;
+
+    if (playerSelection  == computer[0] & computerSelection == computer[1] ) {
         return  "You Lose! Paper beats Rock" ;
     }
        
@@ -27,6 +29,7 @@ function computerPlay() {
   //  }
 
 }
-const playerSelection = "Rock";
+let playerSelection = "Rock";
+console.log(playerSelection.toUpperCase())
 let  computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
