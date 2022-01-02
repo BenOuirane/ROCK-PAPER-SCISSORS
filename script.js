@@ -30,6 +30,20 @@ function computerPlay() {
 
 }
 let playerSelection = "Rock";
-console.log(playerSelection.toUpperCase())
+//console.log(playerSelection.toUpperCase())
 let  computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
+
+
+
+function game(){
+
+ let a =   playRound(playerSelection, computerSelection);
+ let b =    playRound(playerSelection, computerSelection);
+ let c =   playRound(playerSelection, computerSelection);
+ let d =   playRound(playerSelection, computerSelection);
+ let e =   playRound(playerSelection, computerSelection);
+ return a  + " " + b + " " + c + " " + d + " " + e ;
+}
+let gamy = game();
+console.log(gamy)
